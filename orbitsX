@@ -1,12 +1,21 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("OrbitsX Hub", "Midnight")
+local Window = Library.CreateLib("OrbitsX Hub || V1.0,0", "Sentinel")
 
 
-local World = Window:NewTab("World")
+local Basic = Window:NewTab("Basic")
 
-local WorldSection = World:NewSection("World")
+local BasicSection = Basic:NewSection("Basic")
 
-WorldSection:NewToggle("FullBright", "Makes things bright", function(state)
+BasicSection:NewSlider("Walkspeed", "Walkspeed", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+BasicSection:NewSlider("JumpPower", "JumpPower", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+
+BasicSection:NewToggle("FullBright", "Makes things bright", function(state)
     if state then
         loadstring(game:HttpGet("https://pastebin.com/raw/06iG6YkU", true))()
     else
@@ -14,28 +23,25 @@ WorldSection:NewToggle("FullBright", "Makes things bright", function(state)
     end
 end)
 
-
-WorldSection:NewSlider("Walkspeed", "Walkspeed", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+BasicSection:NewButton("CTRL TP", "CTRL and click takes you to your mouse ;)", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/RXdkiui5", true))()
 end)
 
-WorldSection:NewSlider("JumpPower", "JumpPower", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+
+
+BasicSection:NewButton("infinite yield", "local fe admin ;)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source", true))()
 end)
 
-local Esp = Window:NewTab("Esp")
+local FPS = Window:NewTab("FPS")
 
-local EspSection = Esp:NewSection("Esp")
+FPSSection = FPS:NewSection("FPS")
 
-EspSection:NewButton("Unnamed ESP", "Unnamed ESP", function()
+FPSSection:NewButton("Unnamed ESP", "Unnamed ESP", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/kvr0AuWz", true))()
 end)
 
-local Aimbot = Window:NewTab("Aimbot")
-
-local AimbotSection = Aimbot:NewSection("Aimbot")
-
-AimbotSection:NewButton("Aimbot", "To help your bad aim ;)", function()
+FPSSection:NewButton("Aimbot", "To help your bad aim ;)", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Blissful4992/Miscellaneous/main/UNIVERSAL.lua"))()
 end)
 
@@ -47,3 +53,30 @@ Lumbertycoon2Section:NewButton("Lumber tycoon 2 hub", "A lumber tycoon hub", fun
     loadstring(game:HttpGet(("https://raw.githubusercontent.com/NOOBARMYSCRIPTER/NOOBARMYSCRIPTER/main/AXE%20LOOP%20SCRIPT"), true))()
 end)
 
+local Jailbreak = Window:NewTab("Jailbreak")
+
+local JailbreakSection = Jailbreak:NewSection("Jailbreak")
+
+JailbreakSection:NewButton("Auto rob", "Auto rob for jailbreak", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/wawsdasdacx/ohascriptnrrewading/main/jbsaxcriptidk1"))();
+end)
+
+JailbreakSection:NewButton("No doors", "No doors for jailbreak", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/yQ2aQLcZ"))();
+end)
+
+local Bloxfruits = Window:NewTab("Bloxfruits")
+
+local BloxfruitsSection = Bloxfruits:NewSection("Bloxfruits")
+
+BloxfruitsSection:NewButton("Blox fruits hub", "Blox fruits hub for blox fuits", function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/TUPERX/TUPERX/MAIN/BFMIRACLEHUB/LOL/README.md"))()
+end)
+
+local BeeSwarmSimulator = Window:NewTab("BeeSwarmSimulator")
+
+local BeeSwarmSimulatorSection = BeeSwarmSimulator:NewSection("BeeSwarmSimulator")
+
+BeeSwarmSimulatorSection:NewButton("Bee Swarm Simulator hub", "Bee Swarm Simulator hub for Bee Swarm Simulator", function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxking776/kocmoc/main/kocmoc-remastered.lua"))()
+end)
